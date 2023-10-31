@@ -7,29 +7,29 @@ export const EmailSection = () => {
 
   const handleSubmit = async(event)=>{
       event.preventDefault();
-      const data={
-        email: event.target.email.value,
-        subject:event.target.subject.value,
-        message: event.target.message.value
-      }
-      const JSON_DATA = JSON.stringify(data)
-      const endPoint ='api/send'
+      // const data={
+      //   email: event.target.email.value,
+      //   subject:event.target.subject.value,
+      //   message: event.target.message.value
+      // }
+      // const JSON_DATA = JSON.stringify(data)
+      // const endPoint ='api/send'
 
-      const options ={
-        method:'POST',
-        headers:{
-          'Content-Type':'application/json'
-        },
-        body: JSON_DATA
+      // const options ={
+      //   method:'POST',
+      //   headers:{
+      //     'Content-Type':'application/json'
+      //   },
+      //   body: JSON_DATA
 
-      }
-      const response = await fetch(endPoint,options)
-      // const resData = await response.json()
-      console.log(response);
+      // }
+      // const response = await fetch(endPoint,options)
+      // // const resData = await response.json()
+      // console.log(response);
 
-      if (response.status == 200) {
-        console.log('message sent');
-      }
+      // if (response.status == 200) {
+      //   console.log('message sent');
+      // }
 
   }
   return (
@@ -38,9 +38,9 @@ export const EmailSection = () => {
       <div className=' w-full md:w-1/2 pr-10'>
         <h1 className=' text-3xl font-bold text-white'>Contact Me</h1>
         <p className='  py-3 text-base text-gray-400'>
-          I'm currently loooking for new
+          I&apos;m currently loooking for new
           oppoturnities.My inbox is always open.Whether you want to reach out or just
-          say hi, i'll get back to you.
+          say hi, i&apos;ll get back to you.
         </p>
         <div className=' text-white text-2xl flex items-center w-1/2 justify-between'>
           <Link href={'https://github.com/WilsonTomisin'}>

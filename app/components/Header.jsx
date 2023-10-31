@@ -14,7 +14,7 @@ export const Header= () => {
                 <span className=' 
                 text-transparent 
                 bg-clip-text bg-gradient-to-r
-              from-green-500 via-blue-500 to-blue-950'>Hello, i'm </span>
+              from-green-500 via-blue-500 to-blue-950'>Hello, i&apos;m </span>
               <br />
                 <TypeAnimation
                   sequence={[

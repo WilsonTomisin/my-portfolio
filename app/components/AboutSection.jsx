@@ -1,5 +1,5 @@
 "use client"
-import React,{ startTransition, useState , useTransition} from 'react'
+import React,{ useState} from 'react'
 import Image from 'next/image'
 import portfolio from '../assests/portfolio.jpeg'
 
@@ -47,7 +47,7 @@ export const AboutSection = () => {
   return (
     <section className=' flex flex-col md:flex-row  justify-between py-32'>
         <div className=' w-full md:w-1/2'>
-            <Image src={portfolio}  className=' h-fit w-full md:w-4/6 duration-500 transition-all ease-in-out rounded-lg hover:scale-95'/>
+            <Image src={portfolio} alt='my-porfile-picture'  className=' h-fit w-full md:w-4/6 duration-500 transition-all ease-in-out rounded-lg hover:scale-95'/>
         </div>
         <div className=' w-full md:w-1/2'>
           <h2 className=' my-4 text-3xl font-semibold text-white text-left '>About Me</h2>
@@ -71,8 +71,8 @@ export const AboutSection = () => {
                   const active = tab.name === tabButton
                   const activeBtn = active ? ' text-white border-b-2 border-green-500 ' : ' '
                   return(
-                      <div className=' flex flex-col'>
-                          <button value={tab.name} key={index}
+                      <div className=' flex flex-col' key={index}>
+                          <button value={tab.name}
                           onClick={(e)=>setTabButton(e.currentTarget.value)}
                           className={`mr-3 font-semibold hover:text-green-500 ${activeBtn}`}
                           >
