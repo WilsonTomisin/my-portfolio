@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const resend = new Resend('');
-const FROM_EMAIL = 'tommywilson972@gmail.com'
+const TO_EMAIL = 'tommywilson972@gmail.com'
 
 
 export async function POST(req, res) {
@@ -11,8 +11,8 @@ export async function POST(req, res) {
   const { email, Subject, message} = body
   try {
     const data = await resend.emails.send({
-      from: FROM_EMAIL,
-      to: ['tommywilson972@gmail.com' ,email],
+      from:'tomisinwilson6@gmail.com',
+      to: [TO_EMAIL],
       subject: Subject,
       react: <>
               <h1> {Subject}</h1>
